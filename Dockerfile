@@ -1,11 +1,4 @@
-# Pull base image
-From tomcat:8-jre8
-
-# Maintainer
-MAINTAINER "mithilesh"
-
-#Copy War to Webapps
-COPY hello-world-spring-boot-pom-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps
-
-#Exposing the port 8080
-EXPOSE 8080
+FROM openjdk:8
+WORKDIR /usr/local/bin/
+COPY hello-world-spring-boot-pom-0.0.1-SNAPSHOT.jar  .
+CMD ["java", "-jar", "hello-world-spring-boot-pom-0.0.1-SNAPSHOT.jar"]

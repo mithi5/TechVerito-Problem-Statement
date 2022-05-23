@@ -4,5 +4,3 @@ services:
   image: 'tomcat:9'
   ports:
   - "8080:8080"
-  volumes:
-  - "/darsh:/usr/local/tomcat/webapps"

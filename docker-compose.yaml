@@ -1,6 +1,8 @@
 version: '3'
 services:
- mithilesh:
-  image: 'tomcat:8-jre'
+ web_service:
+  image: 'tomcat:9'
   ports:
   - "8080:8080"
+  volume:
+  - "/darsh:/usr/local/tomcat/webapps"
